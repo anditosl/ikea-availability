@@ -21,21 +21,21 @@ const availApi = axios.create({
 });
 
 program
-  .option('-s, --stores <string>', 'Store')
-  .option('-a, --article <string>', 'Article')
+  .option('-s, --stores <string>', 'Stores')
+  .option('-p, --product <string>', 'Product')
   .parse(process.argv)
 
 const SUCCESS = 0
 const FAILURE = 1
 ;(async () => {
   try {
-    const { stores, article } = program
+    const { stores, product } = program
     const storesToCheck = stores.split(',').map(Number)
 
     let responses = []
 
     for (let store of storesToCheck) {
-    	const response = await availApi(`/stores/${store}/availability/ART/${article}`)
+    	const response = await availApi(`/stores/${store}/availability/ART/${product}`)
     	responses.push(response)
     }
 
