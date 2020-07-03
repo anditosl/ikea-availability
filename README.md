@@ -1,18 +1,28 @@
 # ikea-availability
 Script to check availability for any given product
 
-## Usage
+## Getting Started
 
-```
-node index.js --stores <string> --product <string>
-```
+### Dependencies
+
+- node
+- npm
+
+You can find installers for node (it includes npm) in the official website: https://nodejs.org/en/download/
+
+### Run it
+
+- Clone the repo `git clone https://github.com/anditosl/ikea-availability.git`
+- Go to `ikea-availability` directory
+- `npm install`
+- `node index.js --stores <string> --product <string>`
 
 Example
 ```
 node index.js --stores 399,162,167,413 --product 40260717
 ```
 
-## Getting IDs
+## Where do I find the IDs?
 
 ### Product ID
 Look at the ending of the URL for a given product.
